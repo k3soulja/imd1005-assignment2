@@ -3,47 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K3soulja | Videos</title>
-  <link rel="stylesheet" href="merch.css">
+  <title>K3soulja | Merch</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header small-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand">K3soulja</a>
 
-<header>
- <nav>
-     <p class="k3soulja">K3soulja</p>
-   <ul>
-     <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#tour">Tour</a></li>
-    <li><a href="videos.html">Videos</a></li>
-    <li><a href="merch.html">Merch</a></li>
-    <li><a href="credits.html">Credits</a></li>
-   </ul>
- </nav>
-</header>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main class="page-main">
+    <section class="section">
+      <h1>Merch</h1>
+      <p class="section-intro">Browse the collection, filter by category, or search by keyword.</p>
 
-<section id="merch">
-    <h2>Shop the Collection</h2>
+      <div class="controls">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="tops">Tops</button>
+          <button class="filter-btn" data-filter="headwear">Headwear</button>
+          <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
 
-      <div class="merch-items">
-    <div class="shirt">
-     <img src="images/tshirt.png" alt="SMG T-Shirt" class="shirtimg">
-    <p>SMG T-Shirt</p>
-</div>
+        <label for="searchInput" class="visually-hidden">Search merch</label>
+        <input type="text" id="searchInput" placeholder="Search merch...">
+      </div>
 
-    <div class="hoodie">
-     <img src="images/hoodie.webp" alt="SMG Hoodie" class="hoodieimg">
-    <p>SMG T-Shirt</p>
-</div>
+      <div id="merchContainer" class="merch-grid"></div>
+    </section>
 
-</section>
+    <section class="section">
+      <h2>Merch FAQ</h2>
 
+      <div class="accordion">
+        <button class="accordion-btn">How long does shipping take?</button>
+        <div class="accordion-panel">
+          <p>Orders usually ship within 5 to 10 business days depending on stock and drop demand.</p>
+        </div>
 
-<footer>
-  <p>@2025 SMG | All Rights Reserved</p>
+        <button class="accordion-btn">Do you offer local pickup?</button>
+        <div class="accordion-panel">
+          <p>Yes, local pickup can be arranged for selected drops and Ottawa area orders.</p>
+        </div>
 
-</footer>
+        <button class="accordion-btn">Will sold out items restock?</button>
+        <div class="accordion-panel">
+          <p>Some items may restock, but limited drops may not return once sold out.</p>
+        </div>
 
+        <button class="accordion-btn">How do I ask about sizing?</button>
+        <div class="accordion-panel">
+          <p>Use the contact page and send a message with the item name and your sizing question.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>@2026 SMG | All Rights Reserved</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>

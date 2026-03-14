@@ -4,39 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K3soulja | Credits</title>
-  <link rel="stylesheet" href="credits.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <p class="k3soulja">K3soulja</p>
-      <ul>
+  <header class="site-header small-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand">K3soulja</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#tour">Tour</a></li>
         <li><a href="videos.html">Videos</a></li>
         <li><a href="merch.html">Merch</a></li>
-        <li><a href="credits.html">Credits</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="credits">
-      <h2>Credits</h2>
+  <main class="page-main">
+    <section class="section">
+      <h1>Credits</h1>
 
-      <p class="credits">
-        Images of hoodie and tshirt from Google. <br>
-        GitHub, YouTube, and Google for tutorials. <br>
-        Visual Studio Code used for coding. <br>
-        Videos and art covers from my channel. <br>
-      </p>
+      <div class="card">
+        <p>Site created for IMD1005 Web Development.</p>
+        <p>Artist branding and content based on K3soulja.</p>
+        <p>Images and video assets are from my own project materials and previous assignment work.</p>
+        <p>YouTube embeds are used for music video content.</p>
+        <p>Visual Studio Code was used for coding.</p>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>@2025 SMG | All Rights Reserved</p>
+  <footer class="site-footer">
+    <p>@2026 SMG | All Rights Reserved</p>
   </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>

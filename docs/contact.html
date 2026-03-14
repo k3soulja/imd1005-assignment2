@@ -4,63 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>K3soulja | Contact</title>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header small-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand">K3soulja</a>
 
-<header>
-  <nav>
-    <p class="k3soulja">K3soulja</p>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#tour">Tour</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="merch.html">Merch</a></li>
-      <li><a href="credits.html">Credits</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<main>
-  <section id="contact">
-    <h2>Contact</h2>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- AI-assisted: ChatGPT helped me structure labels/inputs correctly -->
-    <form action="#" method="post">
-      <p>
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" required>
-      </p>
+  <main class="page-main">
+    <section class="section">
+      <h1>Contact</h1>
+      <p class="section-intro">For bookings, collabs, questions, or merch help, send a message below.</p>
 
-      <p>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required>
-      </p>
+      <form id="contactForm" novalidate class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+          <p class="error-message" id="nameError"></p>
+        </div>
 
-      <p>
-        <label for="topic">Topic</label><br>
-        <select id="topic" name="topic" required>
-          <option value="">Select one</option>
-          <option value="booking">Booking</option>
-          <option value="collab">Collab</option>
-          <option value="question">Question</option>
-        </select>
-      </p>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <p class="error-message" id="emailError"></p>
+        </div>
 
-      <p>
-        <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="6" required></textarea>
-      </p>
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option value="">Select one</option>
+            <option value="booking">Booking</option>
+            <option value="collab">Collab</option>
+            <option value="question">Question</option>
+            <option value="merch">Merch</option>
+          </select>
+          <p class="error-message" id="topicError"></p>
+        </div>
 
-      <button type="submit">Send</button>
-    </form>
-  </section>
-</main>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6"></textarea>
+          <p class="error-message" id="messageError"></p>
+        </div>
 
-<footer>
-  <p>@2025 SMG | All Rights Reserved</p>
-</footer>
+        <button type="submit" class="button">Send Message</button>
+        <p id="successMessage" class="success-message"></p>
+      </form>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <p>@2026 SMG | All Rights Reserved</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
